@@ -14,7 +14,6 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <c:set var="usuario" scope="session" value="${sessionScope.usuario}"/>
-        
         <title>Catálogo DulceReal</title>
         <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="css/normalize.css">
@@ -52,7 +51,7 @@
         <td><%out.print(p.idProducto);%></td>
       <td><%out.print(p.nombreProducto);%></td>
       <td><%out.print(p.precioProducto);%></td>
-      <td><select>
+      <td><select name="cantidad <%= p.idProducto%>">
   <option value="1">1</option>
   <option value="2">2</option>
   <option value="3">3</option>
@@ -67,44 +66,7 @@
 
     </tr>
     <%}%>
-    <tr>
-        <th><input type="checkbox" name="product" value="algo"></th>
-        <td>1</td>
-      <td>Jill</td>
-      <td>50</td>
-      <td><select>
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5</option>
-  <option value="6">6</option>
-  <option value="7">7</option>
-  <option value="8">8</option>
-  <option value="9">9</option>
-  <option value="10">10</option>
-</select>
-      </td>
-
-    </tr>
-    <tr>
-        <td><input type="checkbox" name="product" value="algo"></td>
-        <td>2</td>
-      <td>Eve</td>
-      <td>94</td>
-      <td><select id="cantidad">
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5</option>
-  <option value="6">6</option>
-  <option value="7">7</option>
-  <option value="8">8</option>
-  <option value="9">9</option>
-  <option value="10">10</option>
-</select></td>
-    </tr>
+    
   </table>
 
 </div>

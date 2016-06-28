@@ -4,6 +4,7 @@
     Author     : EQ
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -16,8 +17,9 @@
     </head>
     <body>
         <div class="row">
+            <br>
             <div class="large-12 large-centered columns">
-        <h5>Hola ${rpta}</h5>
+        <h4>${rpta}</h4>
         </div>
         <br>
         <a href="tablaPedido.jsp">Regresar</a>
