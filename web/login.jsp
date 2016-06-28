@@ -24,7 +24,7 @@
 
 <div class="row">
     
-<form action="s01" method="post">
+<form action="login" method="post">
 
 <div class="large-centered large-8 large-offset-2 columns">
 <div class="panel">

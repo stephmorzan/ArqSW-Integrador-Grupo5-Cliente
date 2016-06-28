@@ -4,6 +4,9 @@
     Author     : EQ
 --%>
 
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
+<%@page import="com.clases.Producto"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -11,7 +14,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <c:set var="usuario" scope="session" value="${sessionScope.usuario}"/>
-        <!--<c:set var="productos" scope="session" value="${sessionScope.productos}"/>-->
+        
         <title>Catálogo DulceReal</title>
         <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="css/normalize.css">
@@ -40,12 +43,15 @@
           <th>Cantidad</th>
 
       </tr>
-      <!--<c:forEach var="i" begin="0" end="80">
+      
+      <%List<Producto> productos = (ArrayList<Producto>)session.getAttribute("productos");
+      for (Producto p: productos){ %>
+          
     <tr>
-        <td><input type="checkbox" name="product" value="${productos.get(i).nombreProducto}"></td>
-        <td><c:out value="${productos.get(i).idProducto}"/></td>
-      <td><c:out value="${productos.get(i).nombreProducto}"/></td>
-      <td><c:out value="${productos.get(i).precioProducto}"/></td>
+        <td><input type="checkbox" name="product" value="<%= p.nombreProducto%>"></td>
+        <td><%out.print(p.idProducto);%></td>
+      <td><%out.print(p.nombreProducto);%></td>
+      <td><%out.print(p.precioProducto);%></td>
       <td><select>
   <option value="1">1</option>
   <option value="2">2</option>
@@ -60,7 +66,7 @@
 </select></td>
 
     </tr>
-    </c:forEach>-->
+    <%}%>
     <tr>
         <th><input type="checkbox" name="product" value="algo"></th>
         <td>1</td>
