@@ -11,7 +11,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <c:set var="usuario" scope="session" value="${sessionScope.usuario}"/>
-        <c:set var="productos" scope="session" value="${sessionScope.productos}"/>
+        <!--<c:set var="productos" scope="session" value="${sessionScope.productos}"/>-->
         <title>Catálogo DulceReal</title>
         <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="css/normalize.css">
@@ -40,7 +40,7 @@
           <th>Cantidad</th>
 
       </tr>
-      <c:forEach var="i" begin="0" end="${productos.size}">
+      <!--<c:forEach var="i" begin="0" end="80">
     <tr>
         <td><input type="checkbox" name="product" value="${productos.get(i).nombreProducto}"></td>
         <td><c:out value="${productos.get(i).idProducto}"/></td>
@@ -60,7 +60,7 @@
 </select></td>
 
     </tr>
-    </c:forEach>
+    </c:forEach>-->
     <tr>
         <th><input type="checkbox" name="product" value="algo"></th>
         <td>1</td>

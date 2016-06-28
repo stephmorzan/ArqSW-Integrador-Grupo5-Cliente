@@ -17,7 +17,7 @@
     <body>
         <div class="row">
             <div class="large-12 large-centered columns">
-        <h5>${rpta}</h5>
+        <h5>Hola ${rpta}</h5>
         </div>
         <br>
         <a href="tablaPedido.jsp">Regresar</a>

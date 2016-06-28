@@ -24,7 +24,7 @@
 
 <div class="row">
     
-<form action="login" method="post">
+<form action="s01" method="post">
 
 <div class="large-centered large-8 large-offset-2 columns">
 <div class="panel">
@@ -38,7 +38,7 @@
 
     <div class="row">
         <div class="large-6 large-offset-3 small-6 columns">
-            <input type="submit" value="Ingresar" onclick="login()">
+            <input type="submit" value="Ingresar">
         </div>
     </div>
 
