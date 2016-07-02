@@ -4,6 +4,7 @@
     Author     : EQ
 --%>
 
+<%@page import="java.util.Date"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
 <%@page import="com.clases.Producto"%>
@@ -27,6 +28,9 @@
     <h1>Haz tu pedido</h1>
     <br>
     <h4>Seleccione los productos de nuestro catálogo:</h4>
+    <br>
+    <br>
+    <p name="fecha">Fecha de hoy: <%= (new Date()).toString()%></p>
 </div>
 <br>
     <div class="large-2 columns"></div>
@@ -51,17 +55,8 @@
         <td><%out.print(p.idProducto);%></td>
       <td><%out.print(p.nombreProducto);%></td>
       <td><%out.print(p.precioProducto);%></td>
-      <td><select name="cantidad <%= p.idProducto%>">
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5</option>
-  <option value="6">6</option>
-  <option value="7">7</option>
-  <option value="8">8</option>
-  <option value="9">9</option>
-  <option value="10">10</option>
+      <td><input type="text" name="cantidad <%= p.idProducto%>">
+  
 </select></td>
 
     </tr>

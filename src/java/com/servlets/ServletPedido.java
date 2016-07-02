@@ -44,6 +44,7 @@ public class ServletPedido extends HttpServlet {
         HttpSession ses = request.getSession(true);
         String[] prodSelect= request.getParameterValues("product");
         String usuario = (String) ses.getAttribute("usuario");
+        String fecha = request.getParameter("fecha");
         Venta venta;
         List<Producto> productos = (List<Producto>) ses.getAttribute("productos");
         List<Venta> ventas = new ArrayList<>();
