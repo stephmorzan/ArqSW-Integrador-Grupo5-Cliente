@@ -29,7 +29,6 @@
     <br>
     <h4>Seleccione los productos de nuestro catálogo:</h4>
     <br>
-    <br>
     <p name="fecha">Fecha de hoy: <%= (new Date()).toString()%></p>
 </div>
 <br>

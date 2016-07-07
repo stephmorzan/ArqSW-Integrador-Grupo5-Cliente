@@ -31,10 +31,25 @@ public interface DulceReal {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "conseguirProds", targetNamespace = "http://webservices.com/", className = "com.webservices.ConseguirProds")
-    @ResponseWrapper(localName = "conseguirProdsResponse", targetNamespace = "http://webservices.com/", className = "com.webservices.ConseguirProdsResponse")
-    @Action(input = "http://webservices.com/dulceReal/conseguirProdsRequest", output = "http://webservices.com/dulceReal/conseguirProdsResponse")
-    public String conseguirProds();
+    @RequestWrapper(localName = "cargarABaseDeDatos", targetNamespace = "http://webservices.com/", className = "com.webservices.CargarABaseDeDatos")
+    @ResponseWrapper(localName = "cargarABaseDeDatosResponse", targetNamespace = "http://webservices.com/", className = "com.webservices.CargarABaseDeDatosResponse")
+    @Action(input = "http://webservices.com/dulceReal/cargarABaseDeDatosRequest", output = "http://webservices.com/dulceReal/cargarABaseDeDatosResponse")
+    public String cargarABaseDeDatos();
+
+    /**
+     * 
+     * @param pedido
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "cargarALaCola", targetNamespace = "http://webservices.com/", className = "com.webservices.CargarALaCola")
+    @ResponseWrapper(localName = "cargarALaColaResponse", targetNamespace = "http://webservices.com/", className = "com.webservices.CargarALaColaResponse")
+    @Action(input = "http://webservices.com/dulceReal/cargarALaColaRequest", output = "http://webservices.com/dulceReal/cargarALaColaResponse")
+    public String cargarALaCola(
+        @WebParam(name = "pedido", targetNamespace = "")
+        String pedido);
 
     /**
      * 
@@ -56,17 +71,44 @@ public interface DulceReal {
 
     /**
      * 
-     * @param pedido
      * @return
      *     returns java.lang.String
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "cargarALaCola", targetNamespace = "http://webservices.com/", className = "com.webservices.CargarALaCola")
-    @ResponseWrapper(localName = "cargarALaColaResponse", targetNamespace = "http://webservices.com/", className = "com.webservices.CargarALaColaResponse")
-    @Action(input = "http://webservices.com/dulceReal/cargarALaColaRequest", output = "http://webservices.com/dulceReal/cargarALaColaResponse")
-    public String cargarALaCola(
-        @WebParam(name = "pedido", targetNamespace = "")
-        String pedido);
+    @RequestWrapper(localName = "conseguirProds", targetNamespace = "http://webservices.com/", className = "com.webservices.ConseguirProds")
+    @ResponseWrapper(localName = "conseguirProdsResponse", targetNamespace = "http://webservices.com/", className = "com.webservices.ConseguirProdsResponse")
+    @Action(input = "http://webservices.com/dulceReal/conseguirProdsRequest", output = "http://webservices.com/dulceReal/conseguirProdsResponse")
+    public String conseguirProds();
+
+    /**
+     * 
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "conseguirPedidos", targetNamespace = "http://webservices.com/", className = "com.webservices.ConseguirPedidos")
+    @ResponseWrapper(localName = "conseguirPedidosResponse", targetNamespace = "http://webservices.com/", className = "com.webservices.ConseguirPedidosResponse")
+    @Action(input = "http://webservices.com/dulceReal/conseguirPedidosRequest", output = "http://webservices.com/dulceReal/conseguirPedidosResponse")
+    public String conseguirPedidos();
+
+    /**
+     * 
+     * @param clave
+     * @param usuarioAdm
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "loguearVendedor", targetNamespace = "http://webservices.com/", className = "com.webservices.LoguearVendedor")
+    @ResponseWrapper(localName = "loguearVendedorResponse", targetNamespace = "http://webservices.com/", className = "com.webservices.LoguearVendedorResponse")
+    @Action(input = "http://webservices.com/dulceReal/loguearVendedorRequest", output = "http://webservices.com/dulceReal/loguearVendedorResponse")
+    public boolean loguearVendedor(
+        @WebParam(name = "usuarioAdm", targetNamespace = "")
+        String usuarioAdm,
+        @WebParam(name = "clave", targetNamespace = "")
+        String clave);
 
 }

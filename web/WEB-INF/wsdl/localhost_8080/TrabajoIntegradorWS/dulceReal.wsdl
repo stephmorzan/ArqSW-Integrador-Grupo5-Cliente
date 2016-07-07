@@ -4,17 +4,11 @@
 <xsd:import namespace="http://webservices.com/" schemaLocation="http://localhost:8080/TrabajoIntegradorWS/dulceReal?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="conseguirProds">
-<part name="parameters" element="tns:conseguirProds"/>
+<message name="cargarABaseDeDatos">
+<part name="parameters" element="tns:cargarABaseDeDatos"/>
 </message>
-<message name="conseguirProdsResponse">
-<part name="parameters" element="tns:conseguirProdsResponse"/>
-</message>
-<message name="loguearCliente">
-<part name="parameters" element="tns:loguearCliente"/>
-</message>
-<message name="loguearClienteResponse">
-<part name="parameters" element="tns:loguearClienteResponse"/>
+<message name="cargarABaseDeDatosResponse">
+<part name="parameters" element="tns:cargarABaseDeDatosResponse"/>
 </message>
 <message name="cargarALaCola">
 <part name="parameters" element="tns:cargarALaCola"/>
@@ -22,23 +16,68 @@
 <message name="cargarALaColaResponse">
 <part name="parameters" element="tns:cargarALaColaResponse"/>
 </message>
+<message name="loguearCliente">
+<part name="parameters" element="tns:loguearCliente"/>
+</message>
+<message name="loguearClienteResponse">
+<part name="parameters" element="tns:loguearClienteResponse"/>
+</message>
+<message name="conseguirProds">
+<part name="parameters" element="tns:conseguirProds"/>
+</message>
+<message name="conseguirProdsResponse">
+<part name="parameters" element="tns:conseguirProdsResponse"/>
+</message>
+<message name="conseguirPedidos">
+<part name="parameters" element="tns:conseguirPedidos"/>
+</message>
+<message name="conseguirPedidosResponse">
+<part name="parameters" element="tns:conseguirPedidosResponse"/>
+</message>
+<message name="loguearVendedor">
+<part name="parameters" element="tns:loguearVendedor"/>
+</message>
+<message name="loguearVendedorResponse">
+<part name="parameters" element="tns:loguearVendedorResponse"/>
+</message>
 <portType name="dulceReal">
-<operation name="conseguirProds">
-<input wsam:Action="http://webservices.com/dulceReal/conseguirProdsRequest" message="tns:conseguirProds"/>
-<output wsam:Action="http://webservices.com/dulceReal/conseguirProdsResponse" message="tns:conseguirProdsResponse"/>
-</operation>
-<operation name="loguearCliente">
-<input wsam:Action="http://webservices.com/dulceReal/loguearClienteRequest" message="tns:loguearCliente"/>
-<output wsam:Action="http://webservices.com/dulceReal/loguearClienteResponse" message="tns:loguearClienteResponse"/>
+<operation name="cargarABaseDeDatos">
+<input wsam:Action="http://webservices.com/dulceReal/cargarABaseDeDatosRequest" message="tns:cargarABaseDeDatos"/>
+<output wsam:Action="http://webservices.com/dulceReal/cargarABaseDeDatosResponse" message="tns:cargarABaseDeDatosResponse"/>
 </operation>
 <operation name="cargarALaCola">
 <input wsam:Action="http://webservices.com/dulceReal/cargarALaColaRequest" message="tns:cargarALaCola"/>
 <output wsam:Action="http://webservices.com/dulceReal/cargarALaColaResponse" message="tns:cargarALaColaResponse"/>
 </operation>
+<operation name="loguearCliente">
+<input wsam:Action="http://webservices.com/dulceReal/loguearClienteRequest" message="tns:loguearCliente"/>
+<output wsam:Action="http://webservices.com/dulceReal/loguearClienteResponse" message="tns:loguearClienteResponse"/>
+</operation>
+<operation name="conseguirProds">
+<input wsam:Action="http://webservices.com/dulceReal/conseguirProdsRequest" message="tns:conseguirProds"/>
+<output wsam:Action="http://webservices.com/dulceReal/conseguirProdsResponse" message="tns:conseguirProdsResponse"/>
+</operation>
+<operation name="conseguirPedidos">
+<input wsam:Action="http://webservices.com/dulceReal/conseguirPedidosRequest" message="tns:conseguirPedidos"/>
+<output wsam:Action="http://webservices.com/dulceReal/conseguirPedidosResponse" message="tns:conseguirPedidosResponse"/>
+</operation>
+<operation name="loguearVendedor">
+<input wsam:Action="http://webservices.com/dulceReal/loguearVendedorRequest" message="tns:loguearVendedor"/>
+<output wsam:Action="http://webservices.com/dulceReal/loguearVendedorResponse" message="tns:loguearVendedorResponse"/>
+</operation>
 </portType>
 <binding name="dulceRealPortBinding" type="tns:dulceReal">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="conseguirProds">
+<operation name="cargarABaseDeDatos">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="cargarALaCola">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -56,7 +95,25 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="cargarALaCola">
+<operation name="conseguirProds">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="conseguirPedidos">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="loguearVendedor">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
