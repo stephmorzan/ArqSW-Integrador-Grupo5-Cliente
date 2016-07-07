@@ -69,6 +69,8 @@
     <div class="large-2 large-centered columns">
         <input type="submit" value="Hacer pedido"/>
     </div>
+    <br>
+    <br>
 </form>
 </div>
         
