@@ -5,7 +5,9 @@
         <group>
             <file>file:/C:/Users/EQ/Desktop/ArqSW-Grupo5-Cliente/src/java/com/servlets/ServletPedido.java</file>
             <file>file:/C:/Users/EQ/Desktop/ArqSW-Grupo5-Cliente/web/login.jsp</file>
+            <file>file:/C:/Users/EQ/Desktop/ArqSW-Grupo5-Cliente/web/tablaPedido.jsp</file>
             <file>file:/C:/Users/EQ/Desktop/ArqSW-Grupo5-Cliente/src/java/com/servlets/ServletLogin.java</file>
+            <file>file:/C:/Users/EQ/Desktop/ArqSW-Grupo5-Cliente/src/java/com/clases/Pedido.java</file>
             <file>file:/C:/Users/EQ/Desktop/ArqSW-Grupo5-Cliente/web/respuesta.jsp</file>
         </group>
     </open-files>

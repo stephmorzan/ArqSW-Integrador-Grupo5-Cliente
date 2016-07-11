@@ -4,6 +4,7 @@
     Author     : EQ
 --%>
 
+<%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.Date"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
@@ -29,7 +30,8 @@
     <br>
     <h4>Seleccione los productos de nuestro catálogo:</h4>
     <br>
-    <p name="fecha">Fecha de hoy: <%= (new Date()).toString()%></p>
+    
+    Fecha de hoy: <p name="fecha"><%= new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(new Date())%></p>
 </div>
 <br>
     <div class="large-2 columns"></div>

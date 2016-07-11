@@ -17,15 +17,16 @@ public class Pedido {
     public float costoTotal=0.0f;
     public String cliente;
     public List<Venta> ventas;
+    public String fecha;
 
 
-    public Pedido(String cliente, List<Venta> ventas) {
+    public Pedido(String cliente, List<Venta> ventas, String fecha) {
         this.cliente = cliente;
         this.ventas = ventas;
         for (int i = 0; i < ventas.size(); i++) {
             costoTotal=costoTotal+ventas.get(i).costo;
         }
-        
+        this.fecha = fecha;
     }
     
     public Pedido(){

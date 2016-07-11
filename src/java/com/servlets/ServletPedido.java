@@ -11,7 +11,9 @@ import com.clases.Venta;
 import com.google.gson.Gson;
 import com.webservices.DulceReal_Service;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -44,7 +46,8 @@ public class ServletPedido extends HttpServlet {
         HttpSession ses = request.getSession(true);
         String[] prodSelect= request.getParameterValues("product");
         String usuario = (String) ses.getAttribute("usuario");
-        String fecha = request.getParameter("fecha");
+        String fecha = new SimpleDateFormat("dd-MM-yyyy  HH:mm:ss").format(new Date());
+        System.out.println(fecha);
         Venta venta;
         List<Producto> productos = (List<Producto>) ses.getAttribute("productos");
         List<Venta> ventas = new ArrayList<>();
@@ -64,7 +67,7 @@ public class ServletPedido extends HttpServlet {
             System.out.println(cant);
         }
         
-        Pedido pedido = new Pedido(usuario, ventas);
+        Pedido pedido = new Pedido(usuario, ventas, fecha);
         String json = new Gson().toJson(pedido);
         String msj = cargarALaCola(json);
         System.out.println(msj);
